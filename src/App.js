@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import react,{useState} from 'react'
+import data from './data'
+import Review from './review'
+import {FaGithubSquare} from 'react-icons/fa'
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <FaGithubSquare className='icon'/>
+      <section className="container">
+          <div className="title">
+            <h2>Our Reviews </h2>
+              <div className="underline"></div>
+          </div>
+
+      </section>
+  <Review />
+  
+    </main>
   );
 }
 
 export default App;
+
+
+/* In this App we will fetch the data direct in the review.js. App.js will be only used to show the components.*/
